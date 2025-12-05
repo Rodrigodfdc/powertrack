@@ -1,0 +1,471 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "rodrigo",
+      "password": "1234",
+      "bodyWeight": 75,
+      "height": 175,
+      "registeredDate": "2024-01-15T10:30:00.000Z"
+    },
+    {
+      "id": "2",
+      "username": "admin",
+      "password": "admin",
+      "bodyWeight": 80,
+      "height": 180,
+      "registeredDate": "2024-01-10T08:00:00.000Z"
+    }
+  ],
+  "workouts": [
+    {
+      "id": "1",
+      "userId": "1",
+      "date": "2024-11-20T10:00:00.000Z",
+      "squat": {
+        "weight": 100,
+        "reps": 5,
+        "sets": 3
+      },
+      "bench": {
+        "weight": 80,
+        "reps": 5,
+        "sets": 3
+      },
+      "deadlift": {
+        "weight": 120,
+        "reps": 3,
+        "sets": 3
+      },
+      "notes": "Buena sesión, me sentí fuerte",
+      "isFavorite": true
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "date": "2024-11-18T10:00:00.000Z",
+      "squat": {
+        "weight": 95,
+        "reps": 8,
+        "sets": 4
+      },
+      "bench": {
+        "weight": 75,
+        "reps": 8,
+        "sets": 4
+      },
+      "deadlift": {
+        "weight": 110,
+        "reps": 5,
+        "sets": 3
+      },
+      "notes": "Día de volumen",
+      "isFavorite": false
+    },
+    {
+      "id": "3",
+      "userId": "2",
+      "date": "2024-11-21T09:00:00.000Z",
+      "squat": {
+        "weight": 140,
+        "reps": 3,
+        "sets": 5
+      },
+      "bench": {
+        "weight": 100,
+        "reps": 3,
+        "sets": 5
+      },
+      "deadlift": {
+        "weight": 180,
+        "reps": 1,
+        "sets": 5
+      },
+      "notes": "Día de máximas, récord personal en peso muerto",
+      "isFavorite": true
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "date": "2024-11-16T10:30:00.000Z",
+      "squat": {
+        "weight": 85,
+        "reps": 10,
+        "sets": 3
+      },
+      "bench": {
+        "weight": 65,
+        "reps": 10,
+        "sets": 3
+      },
+      "deadlift": {
+        "weight": 100,
+        "reps": 8,
+        "sets": 3
+      },
+      "notes": "Entrenamiento ligero de técnica",
+      "isFavorite": false
+    },
+    {
+      "id": "6",
+      "userId": "1",
+      "date": "2024-11-12T10:00:00.000Z",
+      "squat": {
+        "weight": 95,
+        "reps": 5,
+        "sets": 3
+      },
+      "bench": {
+        "weight": 75,
+        "reps": 5,
+        "sets": 3
+      },
+      "deadlift": {
+        "weight": 105,
+        "reps": 5,
+        "sets": 3
+      },
+      "notes": "Entrenamiento normal",
+      "isFavorite": false
+    },
+    {
+      "id": "7",
+      "userId": "1",
+      "date": "2024-11-10T11:00:00.000Z",
+      "squat": {
+        "weight": 80,
+        "reps": 10,
+        "sets": 4
+      },
+      "bench": {
+        "weight": 60,
+        "reps": 12,
+        "sets": 4
+      },
+      "deadlift": {
+        "weight": 90,
+        "reps": 10,
+        "sets": 3
+      },
+      "notes": "Día de alto volumen",
+      "isFavorite": false
+    },
+    {
+      "id": "8",
+      "userId": "1",
+      "date": "2024-11-08T10:00:00.000Z",
+      "squat": {
+        "weight": 105,
+        "reps": 3,
+        "sets": 3
+      },
+      "bench": {
+        "weight": 85,
+        "reps": 3,
+        "sets": 3
+      },
+      "deadlift": {
+        "weight": 125,
+        "reps": 1,
+        "sets": 3
+      },
+      "notes": "Pesado, buscando RM",
+      "isFavorite": true
+    },
+    {
+      "id": "9",
+      "userId": "1",
+      "date": "2024-11-06T09:30:00.000Z",
+      "squat": {
+        "weight": 90,
+        "reps": 8,
+        "sets": 4
+      },
+      "bench": {
+        "weight": 70,
+        "reps": 8,
+        "sets": 4
+      },
+      "deadlift": {
+        "weight": 110,
+        "reps": 5,
+        "sets": 4
+      },
+      "notes": "Día de repeticiones",
+      "isFavorite": false
+    },
+    {
+      "id": "10",
+      "userId": "1",
+      "date": "2024-11-04T10:00:00.000Z",
+      "squat": {
+        "weight": 85,
+        "reps": 5,
+        "sets": 5
+      },
+      "bench": {
+        "weight": 65,
+        "reps": 5,
+        "sets": 5
+      },
+      "deadlift": {
+        "weight": 100,
+        "reps": 5,
+        "sets": 5
+      },
+      "notes": "5x5 ligero",
+      "isFavorite": false
+    },
+    {
+      "id": "11",
+      "userId": "1",
+      "date": "2024-11-02T10:00:00.000Z",
+      "squat": {
+        "weight": 95,
+        "reps": 3,
+        "sets": 3
+      },
+      "bench": {
+        "weight": 75,
+        "reps": 3,
+        "sets": 3
+      },
+      "deadlift": {
+        "weight": 115,
+        "reps": 3,
+        "sets": 3
+      },
+      "notes": "Sesión de mantenimiento",
+      "isFavorite": false
+    },
+    {
+      "id": "15",
+      "userId": "2",
+      "date": "2024-11-19T09:00:00.000Z",
+      "squat": {
+        "weight": 130,
+        "reps": 5,
+        "sets": 5
+      },
+      "bench": {
+        "weight": 95,
+        "reps": 5,
+        "sets": 5
+      },
+      "deadlift": {
+        "weight": 160,
+        "reps": 3,
+        "sets": 5
+      },
+      "notes": "5x5 pesado con admin",
+      "isFavorite": false
+    },
+    {
+      "id": "16",
+      "userId": "2",
+      "date": "2024-11-17T09:00:00.000Z",
+      "squat": {
+        "weight": 120,
+        "reps": 8,
+        "sets": 4
+      },
+      "bench": {
+        "weight": 90,
+        "reps": 8,
+        "sets": 4
+      },
+      "deadlift": {
+        "weight": 150,
+        "reps": 5,
+        "sets": 4
+      },
+      "notes": "Volumen",
+      "isFavorite": false
+    },
+    {
+      "id": "17",
+      "userId": "2",
+      "date": "2024-11-15T09:00:00.000Z",
+      "squat": {
+        "weight": 145,
+        "reps": 1,
+        "sets": 5
+      },
+      "bench": {
+        "weight": 105,
+        "reps": 1,
+        "sets": 5
+      },
+      "deadlift": {
+        "weight": 190,
+        "reps": 1,
+        "sets": 3
+      },
+      "notes": "Buscando nuevos RM",
+      "isFavorite": true
+    },
+    {
+      "id": "18",
+      "userId": "2",
+      "date": "2024-11-13T09:30:00.000Z",
+      "squat": {
+        "weight": 135,
+        "reps": 3,
+        "sets": 5
+      },
+      "bench": {
+        "weight": 98,
+        "reps": 3,
+        "sets": 5
+      },
+      "deadlift": {
+        "weight": 170,
+        "reps": 3,
+        "sets": 3
+      },
+      "notes": "3x5 pesado",
+      "isFavorite": false
+    },
+    {
+      "id": "19",
+      "userId": "2",
+      "date": "2024-11-11T09:00:00.000Z",
+      "squat": {
+        "weight": 125,
+        "reps": 5,
+        "sets": 4
+      },
+      "bench": {
+        "weight": 93,
+        "reps": 5,
+        "sets": 4
+      },
+      "deadlift": {
+        "weight": 155,
+        "reps": 5,
+        "sets": 4
+      },
+      "notes": "Día de repeticiones",
+      "isFavorite": false
+    },
+    {
+      "id": "20",
+      "userId": "2",
+      "date": "2024-11-09T08:00:00.000Z",
+      "squat": {
+        "weight": 140,
+        "reps": 3,
+        "sets": 5
+      },
+      "bench": {
+        "weight": 100,
+        "reps": 3,
+        "sets": 5
+      },
+      "deadlift": {
+        "weight": 180,
+        "reps": 1,
+        "sets": 5
+      },
+      "notes": "Máximas de la semana pasada",
+      "isFavorite": true
+    }
+  ],
+  "restDays": [
+    {
+      "id": "1",
+      "userId": "1",
+      "date": "2024-11-19"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "date": "2024-11-22"
+    },
+    {
+      "id": "3",
+      "userId": "1",
+      "date": "2024-11-17"
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "date": "2024-11-15"
+    },
+    {
+      "id": "5",
+      "userId": "1",
+      "date": "2024-11-13"
+    },
+    {
+      "id": "6",
+      "userId": "1",
+      "date": "2024-11-11"
+    },
+    {
+      "id": "7",
+      "userId": "1",
+      "date": "2024-11-09"
+    },
+    {
+      "id": "8",
+      "userId": "1",
+      "date": "2024-11-07"
+    },
+    {
+      "id": "9",
+      "userId": "1",
+      "date": "2024-11-05"
+    },
+    {
+      "id": "10",
+      "userId": "1",
+      "date": "2024-11-03"
+    },
+    {
+      "id": "11",
+      "userId": "1",
+      "date": "2024-11-01"
+    },
+    {
+      "id": "12",
+      "userId": "1",
+      "date": "2024-10-30"
+    },
+    {
+      "id": "13",
+      "userId": "1",
+      "date": "2024-10-28"
+    },
+    {
+      "id": "14",
+      "userId": "2",
+      "date": "2024-11-20"
+    },
+    {
+      "id": "15",
+      "userId": "2",
+      "date": "2024-11-18"
+    },
+    {
+      "id": "16",
+      "userId": "2",
+      "date": "2024-11-16"
+    },
+    {
+      "id": "17",
+      "userId": "2",
+      "date": "2024-11-14"
+    },
+    {
+      "id": "18",
+      "userId": "2",
+      "date": "2024-11-12"
+    },
+    {
+      "id": "19",
+      "userId": "2",
+      "date": "2024-11-10"
+    }
+  ]
+}

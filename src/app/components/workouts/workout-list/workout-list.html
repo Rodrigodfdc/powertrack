@@ -1,0 +1,121 @@
+<div class="workouts-container">
+  
+  <!-- Header -->
+  <header class="workouts-header">
+    <button class="btn-back" (click)="goToHome()">← Volver</button>
+    <h1 class="page-title">Entrenamientos</h1>
+    <button class="btn-add" (click)="goToNewWorkout()">+ Nuevo</button>
+  </header>
+
+  <!-- Filtros -->
+  <div class="filters-section">
+    <div class="filter-group">
+      <label class="checkbox-label">
+        <input 
+          type="checkbox"
+          [(ngModel)]="showFavoritesOnly"
+          (change)="applyFilters()"
+        >
+        <span>⭐ Solo Favoritos</span>
+      </label>
+    </div>
+  </div>
+
+  <!-- Lista de Entrenamientos -->
+  <div class="workouts-grid" *ngIf="filteredWorkouts.length > 0; else noWorkouts">
+    
+    <div 
+      *ngFor="let workout of filteredWorkouts" 
+      class="workout-card"
+      [ngClass]="{'favorite-card': workout.isFavorite}"
+    >
+      
+      <!-- Header Card -->
+      <div class="card-header">
+        <div>
+          <h3 class="card-title">Sesión de Powerlifting</h3>
+          <p class="card-date">{{ workout.date | date:'dd/MM/yyyy' }}</p>
+        </div>
+        <button 
+          class="btn-favorite"
+          (click)="toggleFavorite(workout.id)"
+          [ngClass]="{'active': workout.isFavorite}"
+        >
+          ⭐
+        </button>
+      </div>
+
+      <!-- Ejercicios -->
+      <div class="exercises-grid">
+        
+        <!-- Sentadilla -->
+        <div class="exercise-item" *ngIf="workout.squat.weight > 0">
+          <div class="exercise-icon">🏋️</div>
+          <div class="exercise-info">
+            <span class="exercise-name">Sentadilla</span>
+            <span class="exercise-details">
+              {{ workout.squat.weight }}kg × {{ workout.squat.reps }} × {{ workout.squat.sets }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Press Banca -->
+        <div class="exercise-item" *ngIf="workout.bench.weight > 0">
+          <div class="exercise-icon">💪</div>
+          <div class="exercise-info">
+            <span class="exercise-name">Press Banca</span>
+            <span class="exercise-details">
+              {{ workout.bench.weight }}kg × {{ workout.bench.reps }} × {{ workout.bench.sets }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Peso Muerto -->
+        <div class="exercise-item" *ngIf="workout.deadlift.weight > 0">
+          <div class="exercise-icon">🔥</div>
+          <div class="exercise-info">
+            <span class="exercise-name">Peso Muerto</span>
+            <span class="exercise-details">
+              {{ workout.deadlift.weight }}kg × {{ workout.deadlift.reps }} × {{ workout.deadlift.sets }}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Volumen Total -->
+      <div class="volume-section">
+        <span class="volume-label">Volumen Total:</span>
+        <span class="volume-value">
+          {{ calculateTotalVolume(workout) }} kg
+        </span>
+      </div>
+
+      <!-- Notas -->
+      <div *ngIf="workout.notes" class="card-notes">
+        <p>📝 {{ workout.notes }}</p>
+      </div>
+
+      <!-- Actions -->
+      <div class="card-actions">
+        <button class="btn-edit" (click)="editWorkout(workout.id)">
+          ✏️ Editar
+        </button>
+        <button class="btn-delete" (click)="deleteWorkout(workout.id)">
+          🗑️ Eliminar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sin entrenamientos -->
+  <ng-template #noWorkouts>
+    <div class="no-workouts">
+      <p class="no-workouts-icon">💪</p>
+      <p class="no-workouts-text">No hay entrenamientos que mostrar</p>
+      <button class="btn-primary" (click)="goToNewWorkout()">
+        Crear Primera Sesión
+      </button>
+    </div>
+  </ng-template>
+
+</div>

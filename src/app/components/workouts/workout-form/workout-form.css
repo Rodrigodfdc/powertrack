@@ -1,0 +1,218 @@
+.form-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.form-card {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 800px;  /* ← AUMENTADO de 600px a 800px */
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+.form-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-title {
+  font-size: 2rem;
+  color: #ff4444;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.form-subtitle {
+  color: #888;
+  font-size: 1rem;
+}
+
+/* Form */
+.workout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;  /* ← AÑADIDO */
+}
+
+.form-group label {
+  color: #ccc;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-input,
+.form-textarea {
+  background: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  width: 100%;  /* ← AÑADIDO */
+  box-sizing: border-box;  /* ← AÑADIDO */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #ff4444;
+}
+
+.form-textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  width: 100%;  /* ← AÑADIDO */
+}
+
+/* Error Message */
+.error-message {
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid #f44336;
+  color: #f44336;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Stats Preview */
+.stats-preview {
+  background: rgba(255, 68, 68, 0.1);
+  border: 1px solid #ff4444;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stats-preview h4 {
+  color: #ff4444;
+  margin-bottom: 10px;
+}
+
+.stats-preview p {
+  color: white;
+  margin: 5px 0;
+}
+
+.volume {
+  color: #ff4444;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: #ff4444;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 68, 68, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #888;
+  border: 1px solid #3a3a3a;
+}
+
+.btn-secondary:hover {
+  background: #3a3a3a;
+  color: white;
+}
+
+/* Exercise Section */
+.exercise-section {
+  background: rgba(255, 68, 68, 0.05);
+  border: 1px solid rgba(255, 68, 68, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;  /* ← AÑADIDO */
+  box-sizing: border-box;  /* ← AÑADIDO */
+  overflow: hidden;  /* ← AÑADIDO */
+}
+
+.exercise-title {
+  color: #ff4444;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {  /* ← CAMBIADO de 600px a 768px */
+  .form-card {
+    padding: 30px 20px;
+    max-width: 100%;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {  /* ← AÑADIDO para móviles pequeños */
+  .form-card {
+    padding: 20px 15px;
+  }
+
+  .exercise-section {
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,49 @@
+<div class="rest-container">
+  
+  <header class="rest-header">
+    <button class="btn-back" (click)="goToHome()">← Volver</button>
+    <h1 class="page-title">📅 Días de Descanso</h1>
+  </header>
+
+  <div class="rest-content">
+    
+    <!-- Formulario para añadir -->
+    <div class="add-section">
+      <h3>Marcar día de descanso</h3>
+      <div class="add-form">
+        <input 
+          type="date"
+          [(ngModel)]="selectedDate"
+          class="date-input"
+        >
+        <button 
+          class="btn-add"
+          (click)="addRestDay()"
+          [disabled]="!selectedDate"
+        >
+          ➕ Añadir
+        </button>
+      </div>
+    </div>
+
+    <!-- Lista de días marcados -->
+    <div class="days-list">
+      <h3>Días marcados ({{ restDays.length }})</h3>
+      
+      <div *ngIf="restDays.length > 0; else noDays" class="days-grid">
+        <div *ngFor="let day of restDays" class="day-card">
+          <span class="day-date">
+            {{ day | date:'EEEE, d MMMM yyyy':'':'es' }}
+          </span>
+          <button class="btn-remove" (click)="removeRestDay(day)">
+            🗑️
+          </button>
+        </div>
+      </div>
+
+      <ng-template #noDays>
+        <p class="no-data">No hay días de descanso marcados</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

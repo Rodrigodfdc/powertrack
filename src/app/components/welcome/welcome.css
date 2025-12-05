@@ -1,0 +1,147 @@
+.welcome-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.welcome-content {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-image {
+  margin-bottom: 40px;
+  animation: fadeIn 0.8s ease-in;
+}
+
+.banner-img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(255, 68, 68, 0.3);
+}
+
+.welcome-text {
+  animation: slideUp 0.8s ease-out;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.highlight {
+  color: #ff4444;
+  text-transform: uppercase;
+}
+
+.user-stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-label {
+  color: #888;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-value {
+  color: #ff4444;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.motivational-text {
+  color: #ccc;
+  font-size: 1.2rem;
+  margin: 30px 0;
+  font-style: italic;
+}
+
+.btn-enter {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 18px 50px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 5px 20px rgba(255, 68, 68, 0.4);
+}
+
+.btn-enter:hover {
+  background: #cc0000;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 68, 68, 0.6);
+}
+
+.btn-enter:active {
+  transform: translateY(-1px);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+
+  .stat-card {
+    padding: 15px 30px;
+  }
+
+  .stat-value {
+    font-size: 1.5rem;
+  }
+
+  .btn-enter {
+    padding: 15px 40px;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,114 @@
+<div class="register-container">
+  <div class="register-card">
+    <div class="header">
+      <h1>💪 Crear Cuenta</h1>
+      <p class="subtitle">Únete a PowerTrack</p>
+    </div>
+
+    <form (submit)="onRegister()" class="register-form">
+      
+      <!-- Usuario -->
+      <div class="form-group">
+        <label for="username">Nombre de Usuario *</label>
+        <input 
+          type="text" 
+          id="username" 
+          [(ngModel)]="username"
+          name="username"
+          placeholder="Elige un nombre de usuario"
+          class="form-input"
+          required
+        >
+      </div>
+
+      <!-- Contraseña -->
+      <div class="form-group">
+        <label for="password">Contraseña *</label>
+        <input 
+          type="password" 
+          id="password" 
+          [(ngModel)]="password"
+          name="password"
+          placeholder="Mínimo 4 caracteres"
+          class="form-input"
+          required
+        >
+      </div>
+
+      <!-- Confirmar Contraseña -->
+      <div class="form-group">
+        <label for="confirmPassword">Confirmar Contraseña *</label>
+        <input 
+          type="password" 
+          id="confirmPassword" 
+          [(ngModel)]="confirmPassword"
+          name="confirmPassword"
+          placeholder="Repite tu contraseña"
+          class="form-input"
+          required
+        >
+      </div>
+
+      <!-- Peso Corporal -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="bodyWeight">Peso (kg) *</label>
+          <input 
+            type="number" 
+            id="bodyWeight" 
+            [(ngModel)]="bodyWeight"
+            name="bodyWeight"
+            placeholder="75"
+            class="form-input"
+            min="30"
+            max="300"
+            required
+          >
+        </div>
+
+        <!-- Altura -->
+        <div class="form-group">
+          <label for="height">Altura (cm) *</label>
+          <input 
+            type="number" 
+            id="height" 
+            [(ngModel)]="height"
+            name="height"
+            placeholder="175"
+            class="form-input"
+            min="120"
+            max="250"
+            required
+          >
+        </div>
+      </div>
+
+      <!-- Mensaje de error -->
+      <div *ngIf="showError" class="error-message">
+        {{ errorMessage }}
+      </div>
+
+      <!-- Mensaje de éxito -->
+      <div *ngIf="showSuccess" class="success-message">
+        ✓ Cuenta creada con éxito. Redirigiendo...
+      </div>
+
+      <!-- Botones -->
+      <button 
+        type="submit" 
+        class="btn btn-primary"
+        [disabled]="!username || !password || !confirmPassword || !bodyWeight || !height"
+      >
+        Crear Cuenta
+      </button>
+
+      <button 
+        type="button" 
+        class="btn btn-secondary"
+        (click)="goToLogin()"
+      >
+        ¿Ya tienes cuenta? Inicia sesión
+      </button>
+    </form>
+  </div>
+</div>

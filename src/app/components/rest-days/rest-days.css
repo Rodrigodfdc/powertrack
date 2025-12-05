@@ -1,0 +1,140 @@
+.rest-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  padding: 20px;
+}
+
+.rest-header {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 2rem;
+  color: white;
+}
+
+.btn-back {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-back:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.rest-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.add-section {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.add-section h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.add-form {
+  display: flex;
+  gap: 15px;
+}
+
+.date-input {
+  flex: 1;
+  background: #1a1a1a;
+  border: 1px solid #3a3a3a;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-add {
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-add:hover:not(:disabled) {
+  background: #cc0000;
+}
+
+.btn-add:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.days-list h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.days-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.day-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-date {
+  color: white;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.btn-remove {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid #f44336;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-remove:hover {
+  background: #f44336;
+  color: white;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  padding: 40px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .add-form {
+    flex-direction: column;
+  }
+}

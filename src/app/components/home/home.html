@@ -1,0 +1,97 @@
+<div class="home-container">
+  
+  <!-- Header -->
+  <header class="home-header">
+    <div class="header-content">
+      <h1 class="logo">💪 PowerTrack</h1>
+      <div class="user-menu">
+        <span class="username">{{ username | uppercase }}</span>
+        <button class="btn-logout" (click)="logout()">Salir</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    
+    <!-- Título -->
+    <div class="welcome-section">
+      <h2 class="welcome-title">Dashboard</h2>
+      <p class="welcome-subtitle">Resumen de tu progreso</p>
+    </div>
+
+    <!-- Estadísticas Cards -->
+    <div class="stats-grid">
+      
+      <div class="stat-card">
+        <div class="stat-icon">🏋️</div>
+        <div class="stat-info">
+          <span class="stat-label">Total Entrenamientos</span>
+          <span class="stat-value">{{ totalWorkouts }}</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">📈</div>
+        <div class="stat-info">
+          <span class="stat-label">Esta Semana</span>
+          <span class="stat-value">{{ weekWorkouts }}</span>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">⭐</div>
+        <div class="stat-info">
+          <span class="stat-label">Récords</span>
+          <span class="stat-value">{{ personalRecords.length }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Récords Personales -->
+    <section class="records-section">
+      <h3 class="section-title">🏆 Récords Personales</h3>
+      
+      <div *ngIf="personalRecords.length > 0; else noRecords" class="records-grid">
+        <div *ngFor="let record of personalRecords" class="record-card">
+          <span class="record-exercise">{{ record.exercise }}</span>
+          <span class="record-weight">{{ record.weight }} kg</span>
+        </div>
+      </div>
+
+      <ng-template #noRecords>
+        <p class="no-data">No hay récords aún. ¡Empieza a entrenar!</p>
+      </ng-template>
+    </section>
+
+<!-- Últimos Entrenamientos -->
+<section class="recent-section">
+  <h3 class="section-title">📋 Últimos Entrenamientos</h3>
+  
+  <div *ngIf="recentWorkouts.length > 0; else noWorkouts" class="recent-list">
+    <div *ngFor="let workout of recentWorkouts" class="recent-item">
+      <div class="recent-info">
+        <span class="recent-exercise">Sesión de Powerlifting</span>
+        <span class="recent-details">{{ workout.exercises }}</span>
+      </div>
+      <span class="recent-date">{{ workout.date | date:'dd/MM/yyyy' }}</span>
+    </div>
+  </div>
+
+  <ng-template #noWorkouts>
+    <p class="no-data">No hay entrenamientos registrados</p>
+  </ng-template>
+</section>
+
+    <!-- Botones de Acción -->
+    <div class="action-buttons">
+      <button class="btn btn-primary" (click)="goToNewWorkout()">
+        ➕ Nuevo Entrenamiento
+      </button>
+      <button class="btn btn-secondary" (click)="goToWorkouts()">
+        📊 Ver Todos
+      </button>
+    </div>
+
+  </main>
+</div>

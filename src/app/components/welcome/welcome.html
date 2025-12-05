@@ -1,0 +1,31 @@
+<div class="welcome-container">
+  <div class="welcome-content">
+    
+    <!-- Mensaje de bienvenida - INTERPOLACIÓN -->
+    <div class="welcome-text">
+      <h1 class="welcome-title">
+        ¡Bienvenido , <span class="highlight">{{ username }}</span>!
+      </h1>
+      
+      <div class="user-stats">
+        <div class="stat-card">
+          <span class="stat-label">Peso Corporal</span>
+          <span class="stat-value">{{ bodyWeight }} kg</span>
+        </div>
+        
+        <div class="stat-card">
+          <span class="stat-label">Altura</span>
+          <span class="stat-value">{{ height }} cm</span>
+        </div>
+      </div>
+
+      <p class="motivational-text">
+        💪 Es hora de entrenar duro y superar tus límites
+      </p>
+
+      <button class="btn-enter" (click)="goToHome()">
+        Entrar a PowerTrack
+      </button>
+    </div>
+  </div>
+</div>
