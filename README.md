@@ -104,7 +104,9 @@ bashnpm start
 5. Acceder a la aplicación
 Abre tu navegador en http://localhost:4200
 Usuarios de prueba disponibles:
-UsuarioContraseñarodrigo1234adminadmin
+Usuario: rodrigo
+Contraseña: 1234
+
 O regístrate con tu propia cuenta.
 
 🔥 Método Alternativo: Iniciar TODO de una vez
